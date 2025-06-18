@@ -1,0 +1,27 @@
+@if (movie$ | async; as movie) {
+  <div class="container">
+    <div class="details-layout">
+      <div class="poster-container">
+        <img [src]="'http://localhost:8080/api/images/' + movie.posterFilename" [alt]="movie.title">
+      </div>
+      <div class="info-container">
+        <h1>{{ movie.title }}</h1>
+        <div class="meta-info">
+          <span>{{ movie.category }}</span>
+          <span>&bull;</span>
+          <span>{{ movie.productionYear }}</span>
+        </div>
+
+        <p class="description">{{ movie.description }}</p>
+
+        <div class="purchase-section">
+          <span class="price">{{ movie.price | currency:'PLN' }}</span>
+          <button (click)="addToCart(movie)" class="btn btn-primary">Dodaj do koszyka</button>
+        </div>
+        <a routerLink="/movies" class="back-link">
+          &larr; Powrót do katalogu
+        </a>
+      </div>
+    </div>
+  </div>
+}

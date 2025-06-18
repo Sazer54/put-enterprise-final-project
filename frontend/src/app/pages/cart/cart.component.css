@@ -1,0 +1,141 @@
+.container { max-width: 900px; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+  font-size: 1rem;
+}
+
+thead {
+  border-bottom: 2px solid var(--accent-primary);
+}
+
+th {
+  text-align: left;
+  padding: 15px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  font-family: var(--font-headings);
+  font-size: 0.9rem;
+}
+
+tbody tr {
+  border-bottom: 1px solid #2a2a2a;
+}
+
+td {
+  padding: 20px 15px;
+  vertical-align: middle;
+}
+
+th, td {
+  padding: 15px;
+  vertical-align: middle;
+}
+th.text-center, td.text-center { text-align: center; }
+th.text-right, td.text-right { text-align: right; }
+
+.product-info { display: flex; align-items: center; gap: 15px; }
+.product-image { width: 60px; border-radius: 4px; }
+.product-title { font-weight: bold; font-family: var(--font-headings); }
+.product-price { font-size: 0.9rem; color: var(--text-secondary); }
+
+.btn-remove {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+  padding: 5px;
+  border-radius: 50%;
+}
+.btn-remove:hover {
+  color: var(--danger-color);
+  background-color: rgba(244, 67, 54, 0.1);
+}
+.btn-remove svg {
+  width: 20px;
+  height: 20px;
+}
+
+td:nth-child(2) { /* Cena */
+  font-weight: bold;
+  color: var(--text-primary);
+}
+
+.cart-summary {
+  background-color: var(--bg-secondary);
+  padding: 30px;
+  border-radius: var(--border-radius);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cart-summary h2 {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  margin: 0 0 5px 0;
+}
+.total-price {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--accent-primary);
+  font-family: var(--font-headings);
+}
+.btn-purchase {
+  padding: 15px 30px;
+  font-size: 1.1rem;
+}
+
+.empty-cart-container {
+  text-align: center;
+  padding: 50px;
+  background-color: var(--bg-secondary);
+  border-radius: var(--border-radius);
+}
+
+.empty-cart-container p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  border: 1px solid #333;
+  border-radius: var(--border-radius);
+  padding: 5px;
+  width: min-content;
+  margin: 0 auto;
+}
+
+.btn-quantity {
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+.btn-quantity:hover {
+  color: var(--accent-primary);
+}
+.btn-quantity:disabled {
+  color: #555;
+  cursor: not-allowed;
+}
+
+.quantity-controls span {
+  font-weight: bold;
+  min-width: 20px;
+  text-align: center;
+}
